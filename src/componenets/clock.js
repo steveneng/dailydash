@@ -1,4 +1,7 @@
 import React,{Component} from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 class Clock extends React.Component {
     constructor(props) {
@@ -18,7 +21,13 @@ class Clock extends React.Component {
     render() {
       return (
         <div>
-          <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+          <AppBar position="static" color="default">
+        <Toolbar>
+          <Typography variant="title" color="inherit">
+          {this.state.date.toLocaleTimeString()}
+          </Typography>
+        </Toolbar>
+      </AppBar>
         </div>
       );
     }

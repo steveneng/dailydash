@@ -44,7 +44,7 @@ class Weather extends Component{
     render(){
         return(
             <div>
-                <h2>Temperature today is: {this.state.temperature}</h2>
+                <h2> {this.state.temperature}&#8457;</h2>
                 <h3>{this.state.descriptions}</h3>
             </div>
         )
