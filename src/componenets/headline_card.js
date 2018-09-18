@@ -36,8 +36,14 @@ class Headline_card extends Component{
         const Media= this.state.headlines;
         let randomArticle=Math.floor(Media.length*Math.random());
         
+        const list= this.state.headlines.map((val,ind)=>
+        <NewsContent key={ind} media={val} />
+    )
+
         return(
-            <NewsContent media={Media[randomArticle]}/>
+            <div>
+                {list[randomArticle]}
+            </div>
         )
     }
 }

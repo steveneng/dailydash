@@ -9,25 +9,21 @@ import CardMedia from '@material-ui/core/CardMedia';
 
 
 const NewsContent= (props)=> {
-        if(
-            !$.isEmptyObject({})){
-            console.log(props.media)
-        }
         return(
             <Card>
                 <CardMedia 
                     component="img"
                     height="140"
-                    // image={media.urlToImage}
+                    image={props.media.urlToImage}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="headline" component="h2">
-                        {console.log(props.media)}
+                        {props.media.title}
                     </Typography>
                     <Typography component="p">
                         {/* {this.props.media.info.description} */}
-                        {/* {media[randomArticle].description} */}
+                        {props.media.description}
                     </Typography>
                 </CardContent>
             </Card>
