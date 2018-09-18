@@ -1,11 +1,22 @@
 import React,{Component} from 'react';
+import ListItem from '@material-ui/core/ListItem';
+import List from '@material-ui/core/List'
+import Typography from '@material-ui/core/Typography';
+
+
 
 const Headline_child=(props)=>{
-    console.log(props,"exp")
+    // console.log(props.info,"exp")
     return(
-        <li>
-            {props.info.title}
-        </li>
+        <List>
+            <ListItem>
+                <Typography variant="body1" color="default">
+                    {props.info.title}
+                    <br/>
+                    - {props.info.author!==null?(props.info.author!==""?props.info.author:props.info.source.name):props.info.source.name}
+                </Typography> 
+            </ListItem >
+        </List>
     )
 }
 

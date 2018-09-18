@@ -1,6 +1,10 @@
 import React,{Component} from 'react';
 import $ from "jquery";
 import Headline_child from './headline_child';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 
 
 class Headlines extends Component{
@@ -40,10 +44,16 @@ render(){
     )
     
     return(
-        <div>
-            <h1>Major Headlines</h1>
-          {listed}
-        </div>
+        <Card>
+            <CardContent>
+                <Typography variant="headline" component="h2">
+                    Main HeadLines
+                </Typography>
+            </CardContent>
+            <CardContent>
+                {listed}
+            </CardContent>
+        </Card>
     )
 }
 
