@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import ListItem from "@material-ui/core/ListItem";
-import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import CardActionArea from "@material-ui/core/CardActionArea";
 
 const Headline_child = props => {
   // console.log(props.info,"exp")
+  const clicked = e => {
+    console.log(props.info.url);
+    window.open(props.info.url);
+  };
   return (
-    <List>
-      <Divider />
+    <CardActionArea onClick={clicked}>
       <ListItem>
         <Typography variant="body1" color="default">
           {props.info.title}
@@ -21,7 +24,7 @@ const Headline_child = props => {
             : props.info.source.name}
         </Typography>
       </ListItem>
-    </List>
+    </CardActionArea>
   );
 };
 

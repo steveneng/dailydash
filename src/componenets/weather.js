@@ -5,6 +5,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Titles from "./titlebar";
 
 class Weather extends Component {
   constructor(props) {
@@ -71,6 +72,7 @@ class Weather extends Component {
   render() {
     return (
       <Card>
+        <Titles title={"Temperature and Weather"} />
         <CardContent>
           <Typography color="textSecondary" variant="headline" component="h2">
             {this.state.temperature} {this.state.unitMeasurement}
@@ -84,7 +86,7 @@ class Weather extends Component {
             onClick={this.clicked}
             size="small"
           >
-            Change to Metric
+            Change Units
           </Button>
         </CardActions>
       </Card>
