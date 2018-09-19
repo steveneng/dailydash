@@ -11,13 +11,17 @@ class App extends Component {
     return (
       <div className="App">
         <Clock />
-        <Grid container spacing={24}>
+        <Grid container spacing={16}>
+
+
           <Grid item md={3}>
             <Weather />
           </Grid>
           <Grid item md={3}>
             <Headline_card />
           </Grid>
+
+          
           <Grid item md={6}>
             <Headlines />
           </Grid>

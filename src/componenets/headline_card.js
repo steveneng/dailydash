@@ -21,7 +21,7 @@ class Headline_card extends Component {
         this.setState({
           headlines: response.articles
         });
-        console.log("second Ajax");
+        console.log(response.articles);
       }
     });
     this.changeArticles();
